@@ -1,0 +1,36 @@
+#include <iostream>
+#include <iomanip>
+
+using std::cout;
+using std::end;
+using std::string;
+
+
+
+int findMinimum(const int* scores, int size)
+{
+int minimum value = scores[0];
+
+for (int i = 1; i < size; i++)
+{
+if (scores[i] < minVal)
+minimum value = scores[i];
+}
+
+return minimum value;
+}
+
+int main()
+{
+const int SIZE = 10;
+
+int ary[SIZE] = {75, 88, 62, 95, 50, 82, 70, 91, 45, 78};
+
+cout << "Address of arry[0] in main: " << &arry[0] << endl;
+
+int minScore = findMinimum(ary, SIZE);
+
+cout << "Minimum score: " << minScore << endl;
+
+return 0;
+}
